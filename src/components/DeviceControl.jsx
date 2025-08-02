@@ -14,7 +14,7 @@ export function DeviceControl() {
     const fetchSwitchStatus = async () => {
       try {
         const response = await fetch(
-          "https://four07-backend.onrender.com/switch-status"
+          "https://tuya-backend-efab.onrender.com/switch-status"
         );
 
         if (!response.ok) {
@@ -43,7 +43,7 @@ export function DeviceControl() {
     try {
       setSwitchLoading(true);
       const response = await fetch(
-        "https://four07-backend.onrender.com/switch",
+        "https://tuya-backend-efab.onrender.com/switch",
         {
           method: "POST",
           headers: {
@@ -85,7 +85,7 @@ export function DeviceControl() {
       <CardContent>
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-1">
-            <span className="text-sm font-medium text-gray-700">
+            <span className="text-sm font-medium text-blue-700">
               Click to the switch to turn the device
             </span>
             <span className="text-xs text-gray-500">
