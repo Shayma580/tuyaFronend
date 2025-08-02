@@ -6,10 +6,10 @@ import React, { useEffect, useState } from "react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-yellow-100">
       <div className="container mx-auto p-6 space-y-6">
         <App />
-        <div className="flex justify-end">
+        <div className="flex justify-front p-4">
           <DeviceControl />
         </div>
         <ChartAreaInteractive />
@@ -58,26 +58,26 @@ function App() {
 
   return (
     <div className="font-sans p-6">
-      <h1 className="text-3xl font-bold mb-6">My Energy Monitor</h1>
+      <h1 className="text-3xl font-bold mb-6">⌛My Energy Monitor</h1>
 
       {data ? (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-xl">
           <div className="bg-teal-100 p-4 rounded-lg shadow-sm border hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out">
-            <div className="text-sm font-medium text-gray-600 mb-1">Time</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Time 🕞</div>
             <div className={`font-semibold ${blinkClass}`}>
               {new Date(data.time).toLocaleTimeString()}
             </div>
           </div>
           <div className="bg-teal-100 p-4 rounded-lg shadow-sm border hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out">
-            <div className="text-sm font-medium text-gray-600 mb-1">Current</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Current ⚙️</div>
             <div className="font-semibold">{data.current} mA</div>
           </div>
           <div className="bg-teal-100 p-4 rounded-lg shadow-sm border hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out">
-            <div className="text-sm font-medium text-gray-600 mb-1">Voltage</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Voltage 📈</div>
             <div className="font-semibold">{data.voltage} V</div>
           </div>
           <div className="bg-teal-100 p-4 rounded-lg shadow-sm border hover:shadow-lg hover:scale-105 transition duration-200 ease-in-out">
-            <div className="text-sm font-medium text-gray-600 mb-1">Power</div>
+            <div className="text-sm font-medium text-gray-600 mb-1">Power ⚡</div>
             <div className="font-semibold">{data.power} W</div>
           </div>
         </div>

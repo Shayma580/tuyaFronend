@@ -79,7 +79,7 @@ export function DeviceControl() {
     <Card className="w-64">
       <CardHeader className="pb-3">
         <CardTitle className="text-base font-semibold">
-          Device Control Switch
+          Device Controller(ON/OFF)
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -100,7 +100,7 @@ export function DeviceControl() {
             checked={switchState}
             onCheckedChange={handleSwitchToggle}
             disabled={switchLoading || initialLoading}
-            className="scale-110"
+            className="scale-90"
           />
         </div>
       </CardContent>
