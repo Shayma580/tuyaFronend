@@ -14,11 +14,11 @@ export function DeviceControl() {
     const fetchSwitchStatus = async () => {
       try {
         const response = await fetch(
-          "https://toda-backend-tr28.onrender.com/switch-status"
+          "https://four07-backend.onrender.com/switch-status"
         );
 
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const result = await response.json();
@@ -43,7 +43,7 @@ export function DeviceControl() {
     try {
       setSwitchLoading(true);
       const response = await fetch(
-        "https://toda-backend-tr28.onrender.com/switch",
+        "https://four07-backend.onrender.com/switch",
         {
           method: "POST",
           headers: {
@@ -79,14 +79,14 @@ export function DeviceControl() {
     <Card className="w-64">
       <CardHeader className="pb-3">
         <CardTitle className="text-base font-semibold">
-          Device Control
+          Device Control Switch
         </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-1">
             <span className="text-sm font-medium text-gray-700">
-              Power Switch
+              Click to the switch to turn the device
             </span>
             <span className="text-xs text-gray-500">
               {initialLoading
@@ -107,3 +107,4 @@ export function DeviceControl() {
     </Card>
   );
 }
+
