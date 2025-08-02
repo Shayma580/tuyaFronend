@@ -23,7 +23,7 @@ function App() {
   const [blink, setBlink] = useState(false);
 
   useEffect(() => {
-    const ws = new WebSocket("wss://https://tuya-backend-efab.onrender.com");
+    const ws = new WebSocket("wss://tuya-backend-efab.onrender.com");
 
     ws.onopen = () => {
       console.log("WebSocket connected");
